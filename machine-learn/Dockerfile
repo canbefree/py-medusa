@@ -8,7 +8,7 @@ RUN pip install numpy && \
 
 RUN jupyter notebook --generate-config
 COPY jupyter_notebook_config.json ~/.jupyter/jupyter_notebook_config.json
-RUN sed -i "s/# c.NotebookApp.token = '<generated>'/c.NotebookApp.token = ''/" ~/.jupyter/jupyter_notebook_config.json
+RUN sed -i "s/# c.NotebookApp.token = '<generated>'/c.NotebookApp.token = ''/" ~/.jupyter/jupyter_notebook_config.py
 
 FROM build as development
 CMD ["jupyter","notebook"]
