@@ -4,7 +4,6 @@ services:
     build:
       context: machine-learn
       target: development
-    command: sleep infinity 
     privileged: true
     env_file:
       - .env
