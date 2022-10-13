@@ -11,4 +11,4 @@ COPY jupyter_notebook_config.json ~/.jupyter/jupyter_notebook_config.json
 RUN sed -i "s/# c.NotebookApp.token = '<generated>'/c.NotebookApp.token = ''/" ~/.jupyter/jupyter_notebook_config.py
 
 FROM build as development
-CMD ["jupyter","notebook"]
+CMD ["jupyter","notebook","--allow-root"]
