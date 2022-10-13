@@ -8,6 +8,8 @@ services:
     privileged: true
     env_file:
       - .env
+    port:
+      - "8080"
     networks: 
       - app_net
 
